@@ -1,0 +1,1 @@
+addUnblockButton("[role=main]");
