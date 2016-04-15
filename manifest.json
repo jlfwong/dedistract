@@ -7,7 +7,7 @@
 
   "content_scripts": [
     {
-      "matches": ["http://www.reddit.com/*"],
+      "matches": ["https://www.reddit.com/*"],
       "css": ["shared.css", "reddit-block.css"],
       "js": ["jquery.js", "shared.js", "reddit-block.js"]
     },

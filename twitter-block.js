@@ -1,1 +1,1 @@
-addUnblockButton(".stream.home-stream");
+addUnblockButton(".content-main > .stream-container");
