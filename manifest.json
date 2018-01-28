@@ -13,6 +13,12 @@
     },
     {
       "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "css": ["shared.css", "youtube-block.css"]
+    },
+    {
+      "matches": [
         "https://news.ycombinator.com/",
         "https://news.ycombinator.com/news"
       ],

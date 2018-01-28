@@ -1,0 +1,19 @@
+/* Remove video grid on homepage */
+ytd-browse[page-subtype=home] {
+  display: none;
+}
+
+/* Remove all "Show more..." bars */
+#continuations {
+  display: none;
+}
+
+/* Hide related videos in sidebar */
+.ytd-compact-video-renderer {
+  display: none;
+}
+
+/* Hide endscreen related videos */
+.ytp-endscreen-content {
+  display: none;
+}
