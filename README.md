@@ -7,18 +7,23 @@ you can still use the sites, you just have to click and hold on a message for
 10s, which should help kill your muscle memory for opening up Reddit, Hacker 
 News, or your Facebook feed.
 
-To install, git clone this repository, then install the extension as an unpacked 
-plugin.
+# Installation instructions
 
-See: https://developer.chrome.com/extensions/getstarted#unpacked
+1. [Download this extension as a zip file][2]
+2. Unzip it
+3. Go to `chrome://extensions` via the Chrome URL bar
+4. Click the "Load unpacked extension..." button
+5. Select the unzipped folder created in step 2
+
+[2]: https://github.com/jlfwong/dedistract/archive/master.zip
 
 The source is simple enough that you should be able to read the whole thing in 
-about 5 minutes. < 100 lines excluding jQuery. You replace the jQuery with your 
+about 5 minutes. < 100 lines excluding jQuery. You can replace the jQuery with your 
 own if you're super paranoid :)
 
 To customize the message, edit the message at the top of `shared.js`.
 
-Comes with builtin blocking of Reddit, Hacker News, Twitter, and Facebook news feed (still allows access to chat).
+Comes with builtin blocking of Reddit, Hacker News, Twitter, Facebook news feed (still allows access to chat), and a bunch of stuff on YouTube.
 
 ![](http://i.imgur.com/UkT3yo9.png)
 ![](http://i.imgur.com/8yI3plt.png)
