@@ -5,8 +5,8 @@ var addUnblockButton = function(selector) {
     "Better things to do:",
     "- Read a book",
     "- Write in your journal",
-    "- Talk to friends",
-    "- Do graphics work"
+    "- Talk to people",
+    "- Practice dance"
   ].join("<br>");
 
   var holdLength = 5000;
@@ -22,7 +22,7 @@ var addUnblockButton = function(selector) {
     $showButton.css('font-size',
                     fontSize * ((holdLength - heldTime) / holdLength));
     if (heldTime >= holdLength) {
-      $content.show();
+      $content.css({display: "block", visibility: "visible"})
       $showButton.hide();
     } else {
       shrinkTimeout = setTimeout(shrink, intervalLength);

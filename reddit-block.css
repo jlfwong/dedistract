@@ -1,3 +1,7 @@
-[role=main] {
-    display: none;
+[role=main], [aria-hidden=false] {
+    visibility: hidden;
+}
+
+.dedistract-header {
+    margin-top: 48px;
 }
