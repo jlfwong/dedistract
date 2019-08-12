@@ -31,7 +31,10 @@
       "js": ["jquery.js", "shared.js", "fb-block.js"]
     },
     {
-      "matches": ["https://twitter.com/*"],
+      "matches": [
+        "https://twitter.com/",
+        "https://twitter.com/home"
+      ],
       "css": ["shared.css", "twitter-block.css"],
       "js": ["jquery.js", "shared.js", "twitter-block.js"]
     }

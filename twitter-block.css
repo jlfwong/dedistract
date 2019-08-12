@@ -1,3 +1,7 @@
 .content-main > .stream-container {
     display: none;
 }
+
+div[data-testid=primaryColumn] {
+    display: none;
+}

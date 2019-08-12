@@ -1,5 +1,7 @@
 var addUnblockButton = function(selector) {
-  var $content = $(selector).first();
+  function getContent() {
+    return $(selector).first();
+  }
 
   var msg = [
     "Better things to do:",
@@ -22,7 +24,7 @@ var addUnblockButton = function(selector) {
     $showButton.css('font-size',
                     fontSize * ((holdLength - heldTime) / holdLength));
     if (heldTime >= holdLength) {
-      $content.css({display: "block", visibility: "visible"})
+      getContent().css({display: "block", visibility: "visible"})
       $showButton.hide();
     } else {
       shrinkTimeout = setTimeout(shrink, intervalLength);
@@ -53,5 +55,15 @@ var addUnblockButton = function(selector) {
       clearTimeout(shrinkTimeout);
     });
 
-  $content.before($showButton);
+  var tries = 0;
+
+  (function addButton() {
+    if (tries++ > 5) return;
+    var $content = getContent()
+    if ($content.length > 0) {
+      $content.before($showButton);
+    } else {
+      setTimeout(addButton, 1000)
+    }
+  })()
 };
