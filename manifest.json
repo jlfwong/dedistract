@@ -37,6 +37,13 @@
       ],
       "css": ["shared.css", "twitter-block.css"],
       "js": ["jquery.js", "shared.js", "twitter-block.js"]
+    },
+    {
+      "matches": [
+        "https://www.instagram.com/*"
+      ],
+      "css": ["shared.css", "instagram-block.css"],
+      "js": ["jquery.js", "shared.js", "instagram-block.js"]
     }
   ]
 }
