@@ -1,1 +1,1 @@
-addUnblockButton("[id^=topnews_main_stream_]");
+addUnblockButton("[role=feed]");
