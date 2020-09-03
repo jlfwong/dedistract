@@ -4,11 +4,9 @@ var addUnblockButton = function(selector) {
   }
 
   var msg = [
-    "Better things to do:",
-    "- Read a book",
-    "- Write in your journal",
-    "- Talk to people",
-    "- Practice dance"
+    "Better things to do on your birthday:",
+    "- Go to `jamieis${adjective}${age}.${tld}` and click the *right* link",
+    "- Enter 'burning man' for the password"
   ].join("<br>");
 
   var holdLength = 5000;
