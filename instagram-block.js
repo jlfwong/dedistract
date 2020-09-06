@@ -1,1 +1,0 @@
-addUnblockButton("[role=main]");

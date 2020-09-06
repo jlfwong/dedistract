@@ -1,7 +1,20 @@
 .content-main > .stream-container {
-    display: none;
+    visibility: hidden;
+}
+.disable-dedistract .content-main > .stream-container {
+    visibility: visible;
 }
 
 div[data-testid=primaryColumn] {
-    display: none;
+    visibility: hidden;
+}
+.disable-dedistract div[data-testid=primaryColumn] {
+    visibility: visible;
+}
+
+[aria-label='Timeline: Trending now'] {
+    visibility: hidden !important;
+}
+.disable-dedistract [aria-label='Timeline: Trending now'] {
+    visibility: visible;
 }

@@ -1,3 +1,26 @@
+/* Old facebook design */
 [id^=topnews_main_stream_], #fb_stories_card_root {
-    display: none;
+    visibility: hidden;
+}
+
+/* Hide stories */
+[data-pagelet=Stories] {
+    visibility: hidden;
+}
+.disable-dedistract [data-pagelet=Stories] {
+    visibility: visible;
+}
+
+/*
+If I hide the feed completely, it seems to just generate the feed outside
+of this element for some reason...
+
+Sooo let's make it really tiny instead.
+*/
+[role=feed] {
+    transform: scale(0.001);
+}
+
+.disable-dedistract [role=feed] {
+    transform: none;
 }

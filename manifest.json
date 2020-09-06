@@ -9,7 +9,7 @@
     {
       "matches": ["https://www.reddit.com/*"],
       "css": ["shared.css", "reddit-block.css"],
-      "js": ["jquery.js", "shared.js", "reddit-block.js"]
+      "js": ["shared.js", "reddit-block.js"]
     },
     {
       "matches": [
@@ -23,27 +23,26 @@
         "https://news.ycombinator.com/news"
       ],
       "css": ["shared.css", "hn-block.css"],
-      "js": ["jquery.js", "shared.js", "hn-block.js"]
+      "js": ["shared.js", "hn-block.js"]
     },
     {
       "matches": ["https://www.facebook.com/*"],
       "css": ["shared.css", "fb-block.css"],
-      "js": ["jquery.js", "shared.js", "fb-block.js"]
+      "js": ["shared.js", "fb-block.js"]
     },
     {
       "matches": [
-        "https://twitter.com/",
-        "https://twitter.com/home"
+        "https://twitter.com/*"
       ],
       "css": ["shared.css", "twitter-block.css"],
-      "js": ["jquery.js", "shared.js", "twitter-block.js"]
+      "js": ["shared.js", "twitter-block.js"]
     },
     {
       "matches": [
         "https://www.instagram.com/*"
       ],
       "css": ["shared.css", "instagram-block.css"],
-      "js": ["jquery.js", "shared.js", "instagram-block.js"]
+      "js": ["shared.js", "instagram-block.js"]
     }
   ]
 }

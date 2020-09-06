@@ -1,0 +1,37 @@
+.dedistract-banner {
+  position: fixed;
+  width: 100vw;
+  height: 50px;
+  top: calc(100vh - 50px);
+  background: white;
+  border-top: 1px solid black;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.disable-dedistract .dedistract-banner {
+  display: none;
+}
+
+.dedistract-dialog {
+  position: fixed;
+  width: 50vw;
+  height: 50vh;
+  top: 25vh;
+  left: 25vw;
+  background: white;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.disable-dedistract .dedistract-dialog {
+  display: none;
+}
