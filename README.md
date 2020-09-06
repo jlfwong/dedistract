@@ -7,6 +7,9 @@ you can still use the sites, you just have to click and hold on a message for
 10s, which should help kill your muscle memory for opening up Reddit, Hacker
 News, or your Facebook feed.
 
+The extension also intentionally leaves access to some parts of the sites
+unblocked, like notifications & messages on Facebook & Twitter.
+
 # Installation instructions
 
 1. [Download this extension as a zip file][2]
