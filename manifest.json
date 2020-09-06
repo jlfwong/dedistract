@@ -3,7 +3,7 @@
 
   "name": "De-distract myself",
   "description": "Block certain pages",
-  "version": "1.0",
+  "version": "2.0",
 
   "content_scripts": [
     {
