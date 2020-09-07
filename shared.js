@@ -32,6 +32,7 @@ function addBanner() {
         const remaining = delayInSeconds - (+new Date() - start) / 1000
         if (remaining < 0) {
           setEnabled(false)
+          document.body.removeChild(dialog)
           clearInterval(interval)
         } else {
           document.querySelector(".dedistract-countdown").textContent = remaining.toFixed(0)
