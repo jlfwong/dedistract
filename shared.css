@@ -32,6 +32,9 @@
   font-size: 18px;
   font-family: 'Courier New', Courier, monospace;
 }
+.dedistract-dialog > div {
+  display: block;
+}
 .disable-dedistract .dedistract-dialog {
   display: none;
 }

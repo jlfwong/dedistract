@@ -2,6 +2,6 @@
     visibility: hidden;
 }
 
-.dedistract-header {
-    margin-top: 75px;
+.disable-dedistract [role=main], [aria-hidden=false] {
+    visibility: visible;
 }
