@@ -6,7 +6,7 @@ function addBanner() {
   `)
   document.body.appendChild(banner)
   banner.addEventListener("click", () => {
-    let delayInSeconds = 6
+    let delayInSeconds = 10
 
     const dialog = toDOM(`
       <div class="dedistract-dialog">
