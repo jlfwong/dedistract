@@ -1,6 +1,6 @@
 let lastPath = null
 addPathChangeListener((path) => {
-  if (path === "/") {
+  if (path === "/" || path === "/groups/feed" || path === "/groups/feed/") {
     if (document.querySelector(".disable-dedistract") && lastPath && lastPath.indexOf("photo") !== -1) {
       // Special case: when you're looking through the feed and click on a photo, it changes
       // the path to something like "/photos?id=..." or "/groupname/photos/..."
