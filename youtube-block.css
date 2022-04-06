@@ -3,6 +3,15 @@ ytd-browse[page-subtype=home] {
   display: none;
 }
 
+/* Completely hide shorts */
+ytd-shorts {
+  display: none !important;
+}
+
+ytd-mini-guide-entry-renderer[aria-label=Shorts] {
+  display: none !important;
+}
+
 /* Remove all "Show more..." bars */
 #continuations {
   display: none;
