@@ -37,6 +37,13 @@
       "matches": ["https://www.instagram.com/*"],
       "css": ["shared.css", "instagram-block.css"],
       "js": ["shared.js", "instagram-block.js"]
+    },
+    {
+      "matches": [
+        "https://www.linkedin.com/*"
+      ],
+      "css": ["shared.css", "linkedin-block.css"],
+      "js": ["shared.js", "linkedin-block.js"]
     }
   ]
 }

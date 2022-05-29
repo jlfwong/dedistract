@@ -1,0 +1,7 @@
+#main, .news-module {
+  visibility: hidden;
+}
+
+.disable-dedistract #main, .disable-dedistract .news-module {
+  visibility: visible;
+}
