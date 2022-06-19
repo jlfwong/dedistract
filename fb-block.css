@@ -10,6 +10,12 @@
 .disable-dedistract [data-pagelet=Stories] {
     visibility: visible;
 }
+[aria-label=Stories] {
+    visibility: hidden;
+}
+.disable-dedistract [aria-label=Stories] {
+    visibility: visible;
+}
 
 /*
 If I hide the feed completely, it seems to just generate the feed outside
