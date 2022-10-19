@@ -30,3 +30,11 @@ Sooo let's make it really tiny instead.
 .disable-dedistract [role=feed] {
     transform: none;
 }
+
+#ssrb_feed_start + div {
+    transform: scale(0.001);
+}
+
+.disable-dedistract #ssrb_feed_start + div {
+    transform: none;
+}
