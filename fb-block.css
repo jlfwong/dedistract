@@ -38,3 +38,11 @@ Sooo let's make it really tiny instead.
 .disable-dedistract #ssrb_feed_start + div {
     transform: none;
 }
+
+[role=main] {
+    transform: scale(0.001);
+}
+
+.disable-dedistract [role=main] {
+    transform: none;
+}
