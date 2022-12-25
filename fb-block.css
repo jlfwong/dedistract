@@ -39,6 +39,14 @@ Sooo let's make it really tiny instead.
     transform: none;
 }
 
+#ssrb_rhc_start + div {
+    transform: scale(0.001);
+}
+
+.disable-dedistract #ssrb_rhc_start + div {
+    transform: none;
+}
+
 [role=main] {
     transform: scale(0.001);
 }
