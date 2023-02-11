@@ -8,22 +8,32 @@ function addBanner() {
   banner.addEventListener("click", () => {
     let delayInSeconds = 10
 
+    // TODO(jlfwong): At the moment, the data from the "why" and "need" fields
+    // aren't actually captured anywhere, nor are they blocking at all.
+    //
+    // I'm going to play around with this for a while and see if their mere
+    // presence is enough to be useful, or if having them as a requirement,
+    // or logging the results would be interesting.
     const dialog = toDOM(`
       <div class="dedistract-dialog">
         <div>
-          Looks like you're trying to unblock.<br/>
+          Breathe<br/>
+          <div id="breath-circle"></div>
           <br/>
-          Here are some other things to consider doing instead: <br/>
-          - Talk to friends <br/>
-          - Read a book <br/>
-          - Watch a show <br/>
-          - Write in your journal <br/>
+          Why are you here right now?<br/>
+          <input type="text" id="why"><br/>
+          <br/>
+          What do you need? <br/>
+          <input type="text" id="need"><br/>
           <br/>
           To unblock, click and hold for <span class="dedistract-countdown">${delayInSeconds}</span> seconds. <br/>
         </div>
       </div>
     `)
     document.body.appendChild(dialog)
+    requestAnimationFrame(() => {
+      document.getElementById("why").focus()
+    })
 
     let interval = null
     dialog.addEventListener("mousedown", () => {

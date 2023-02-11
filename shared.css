@@ -29,12 +29,40 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 18px;
+  font-size: 25px;
+  text-align: center;
   font-family: 'Courier New', Courier, monospace;
+}
+.dedistract-dialog input {
+  width: 80%;
+  outline: 1px solid black;
 }
 .dedistract-dialog > div {
   display: block;
 }
 .disable-dedistract .dedistract-dialog {
   display: none;
+}
+
+/* animation for a grey circle that grows and shrinks slowly to guide breathing */
+#breath-circle {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: white;
+  border: 3px solid #ccc;
+  border-radius: 50%;
+  animation: breath 6s infinite;
+}
+
+@keyframes breath {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.5);
+  }
 }
