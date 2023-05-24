@@ -8,42 +8,50 @@ function addBanner() {
   banner.addEventListener("click", () => {
     let delayInSeconds = 10
 
-    // TODO(jlfwong): At the moment, the data from the "why" and "need" fields
-    // aren't actually captured anywhere, nor are they blocking at all.
-    //
-    // I'm going to play around with this for a while and see if their mere
-    // presence is enough to be useful, or if having them as a requirement,
-    // or logging the results would be interesting.
     const dialog = toDOM(`
       <div class="dedistract-dialog">
         <div>
           Breathe<br/>
           <div id="breath-circle"></div>
           <br/>
-          Why are you here right now?<br/>
-          <input type="text" id="why"><br/>
+          What do you need right now?<br/>
+          <input type="text" id="dedistract-why" autocomplete="off"><br/>
           <br/>
-          What do you need? <br/>
-          <input type="text" id="need"><br/>
-          <br/>
-          To unblock, click and hold for <span class="dedistract-countdown">${delayInSeconds}</span> seconds. <br/>
+          <div id="dedistract-message"></div>
         </div>
       </div>
     `)
     document.body.appendChild(dialog)
+    const why = document.getElementById("dedistract-why")
+    const message = document.getElementById("dedistract-message")
+
     requestAnimationFrame(() => {
-      document.getElementById("why").focus()
+      why.focus()
+    })
+
+    why.addEventListener("input", () => {
+      if (why.value.length > 5) {
+        message.innerHTML = `To unblock, click and hold for <span class='dedistract-countdown'>${delayInSeconds}</span> seconds.`
+      } else {
+        message.innerHTML = ``
+      }
     })
 
     let interval = null
     dialog.addEventListener("mousedown", () => {
+      if (why.value === "") {
+        return
+      }
+
       let start = +new Date()
-      interval = setInterval(() => {
+      interval = setInterval(async () => {
         const remaining = delayInSeconds - (+new Date() - start) / 1000
         if (remaining < 0) {
-          setEnabled(false)
-          document.body.removeChild(dialog)
-          clearInterval(interval)
+          appendDismissalReason(window.location.hostname, why.value, new Date(), () => {
+            setEnabled(false)
+            document.body.removeChild(dialog)
+            clearInterval(interval)
+          })
         } else {
           document.querySelector(".dedistract-countdown").textContent = remaining.toFixed(0)
         }
@@ -54,6 +62,28 @@ function addBanner() {
     })
   })
 }
+
+// Function to retrieve the stored list of dismissal reasons
+function retrieveDismissalReasons(callback) {
+  chrome.storage.sync.get({ dismissalReasons: [] }, function(result) {
+    callback(result.dismissalReasons);
+  });
+}
+
+// Function to store the updated list of dismissal reasons
+function storeDismissalReasons(updatedList, callback) {
+  chrome.storage.sync.set({ dismissalReasons: updatedList }, callback);
+}
+
+// Function to append a new dismissal reason to the list
+function appendDismissalReason(domain, message, time, callback) {
+  retrieveDismissalReasons(function(dismissalReasons) {
+    console.log("Dismissal reasons", dismissalReasons)
+    dismissalReasons.push({ domain: domain, message: message, time: time.toISOString() });
+    storeDismissalReasons(dismissalReasons, callback);
+  });
+}
+
 
 addBanner()
 
@@ -102,6 +132,7 @@ function addPathChangeListener(callback) {
   window.addEventListener("keydown", beginPolling, /* capture = */ true)
   window.addEventListener("popstate", beginPolling, /* capture = */ true)
 }
+
 
 const disableClassName = "disable-dedistract"
 

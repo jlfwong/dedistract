@@ -5,6 +5,7 @@
   top: calc(100vh - 50px);
   background: white;
   border-top: 1px solid black;
+  color: black;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -25,6 +26,7 @@
   left: 25vw;
   background: white;
   border: 1px solid black;
+  color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,6 +41,10 @@
 }
 .dedistract-dialog > div {
   display: block;
+  width: 50vw;
+}
+#dedistract-message {
+  min-height: 100px;
 }
 .disable-dedistract .dedistract-dialog {
   display: none;

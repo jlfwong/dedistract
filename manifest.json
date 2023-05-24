@@ -4,7 +4,7 @@
   "name": "De-distract myself",
   "description": "Block certain pages",
   "version": "2.0",
-
+  "permissions": ["storage"],
   "content_scripts": [
     {
       "matches": ["https://www.reddit.com/*"],
@@ -12,9 +12,7 @@
       "js": ["shared.js", "reddit-block.js"]
     },
     {
-      "matches": [
-        "https://www.youtube.com/*"
-      ],
+      "matches": ["https://www.youtube.com/*"],
       "css": ["shared.css", "youtube-block.css"]
     },
     {
@@ -31,16 +29,12 @@
       "js": ["shared.js", "fb-block.js"]
     },
     {
-      "matches": [
-        "https://twitter.com/*"
-      ],
+      "matches": ["https://twitter.com/*"],
       "css": ["shared.css", "twitter-block.css"],
       "js": ["shared.js", "twitter-block.js"]
     },
     {
-      "matches": [
-        "https://www.instagram.com/*"
-      ],
+      "matches": ["https://www.instagram.com/*"],
       "css": ["shared.css", "instagram-block.css"],
       "js": ["shared.js", "instagram-block.js"]
     }
