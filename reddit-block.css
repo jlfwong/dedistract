@@ -1,7 +1,7 @@
-[role=main], [aria-hidden=false] {
+[role=main], [aria-hidden=false], shreddit-app {
     visibility: hidden;
 }
 
-.disable-dedistract [role=main], .disable-dedistract [aria-hidden=false] {
+.disable-dedistract [role=main], .disable-dedistract [aria-hidden=false], .disable-dedistract shreddit-app {
     visibility: visible;
 }
