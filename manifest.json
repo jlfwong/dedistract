@@ -29,7 +29,7 @@
       "js": ["shared.js", "fb-block.js"]
     },
     {
-      "matches": ["https://twitter.com/*"],
+      "matches": ["https://twitter.com/*", "https://x.com/*"],
       "css": ["shared.css", "twitter-block.css"],
       "js": ["shared.js", "twitter-block.js"]
     },
