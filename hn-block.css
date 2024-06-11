@@ -5,3 +5,11 @@ body > center > table > tbody > tr:nth-child(3) > td > table {
 .disable-dedistract > center > table > tbody > tr:nth-child(3) > td > table {
     visibility: visible;
 }
+
+#hnmain {
+    visibility: hidden;
+}
+
+.disable-dedistract #hnmain {
+    visibility: visible;
+}
