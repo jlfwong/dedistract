@@ -1,1 +1,5 @@
-enableFeedOnPathsOtherThan(["/", "/explore/", "/reels/"])
+enableFeedOnPathsOtherThan([
+  "/",
+  "/reels",
+  "/reels/",
+])
