@@ -1,7 +1,18 @@
-[role=main], [aria-hidden=false] {
-    visibility: hidden;
+body:not(.disable-dedistract) [role=main] {
+  visibility: hidden;
 }
 
-.disable-dedistract [role=main], [aria-hidden=false] {
-    visibility: visible;
+body.disable-dedistract [role=main] {
+  visibility: visible;
+}
+
+/*
+ * Instagram renders the search UI and its suggested Explore media as sibling
+ * sections in the same main element. Keep the section containing the search
+ * input (and the results it populates) while removing only the media grid.
+ */
+[role=main]:has(input[aria-label="Search input"])
+  > div
+  > div:has(a[href*="/p/"], a[href*="/reel/"]) {
+  display: none !important;
 }
